@@ -1,0 +1,56 @@
+- - 1 
+password = input("Your code please >>>")
+
+original_password = "correct"
+
+if original_password == "password":
+    print("Yes")
+else:
+    print("No")
+    
+- - 2
+
+a = int(input())
+h = str(a // 3600)
+m = (a // 60) % 60
+s = a % 60
+if m < 10:
+    m = '0' + str(m)
+else:
+    m = str(m)
+if s < 10:
+    s = '0' + str(s)
+else:
+    s = str(s)
+print(h + ':' + m + ':' + s)
+
+- - 3
+n1 = 3
+n2 = 33
+n3 = 333
+print(n1 + n2 + n3)
+
+- - 4
+
+x = int(input('Введите число x:'))
+xmax = 0
+i = x
+
+while i:
+    if i % 10 > xmax:
+        xmax = i % 10
+    i //= 10
+print('Максимальная цифра числа', x, ':', xmax)
+
+- - 5
+
+a = int(input("Введите результаты пробежки первого дня в км "))
+b = int(input("Введите общий желаемый результат в км "))
+result_days = 1
+result_km = a
+while result_km < b:
+    a = a + 0.1 * a
+    result_days += 1
+    result_km = result_km + a
+print(f"Вы достигнете требуемых показателей на %.d день" % result_days)
+
